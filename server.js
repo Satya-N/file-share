@@ -4,7 +4,7 @@ const fFiles = require('./routes/files');
 const sFiles = require('./routes/show');
 const dFiles = require('./routes/download')
 const path = require('path')
-const cors = require('cors')
+// const cors = require('cors')
 
 const app = express();
 
@@ -13,12 +13,12 @@ connectDB();
 app.use(express.static('public'))
 app.use(express.json());
 
-// CORS
-const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
-    //['http://localhost:3000', 'http://localhost:3300']
-}
-app.use(cors(corsOptions))
+// // CORS
+// const corsOptions = {
+//     origin: process.env.ALLOWED_CLIENTS.split(',')
+//     //['http://localhost:3000', 'http://localhost:3300']
+// }
+// app.use(cors(corsOptions))
 
 //Template engine
 
