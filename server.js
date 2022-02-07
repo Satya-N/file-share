@@ -15,8 +15,8 @@ app.use(express.json());
 
 // CORS
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
-//['http://localhost:3000', 'http://localhost:3300']
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions))
 
